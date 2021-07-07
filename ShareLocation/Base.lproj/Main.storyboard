@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShareLocation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZF0-c0-3Iy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-qK-bTx">
+                                <rect key="frame" x="20" y="786" width="200" height="90"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bnI-9P-Hi3">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOQ-r1-b6I">
+                                            <rect key="frame" x="15" y="5" width="180" height="80"/>
+                                            <string key="text">My Location:
+Longitude: -888.88
+Latitude: -888.88</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="UOQ-r1-b6I" secondAttribute="trailing" constant="5" id="6Tm-Ps-BRb"/>
+                                        <constraint firstAttribute="bottom" secondItem="UOQ-r1-b6I" secondAttribute="bottom" constant="5" id="Bgg-Gz-aGF"/>
+                                        <constraint firstItem="UOQ-r1-b6I" firstAttribute="top" secondItem="bnI-9P-Hi3" secondAttribute="top" constant="5" id="UB7-dL-dvx"/>
+                                        <constraint firstItem="UOQ-r1-b6I" firstAttribute="leading" secondItem="bnI-9P-Hi3" secondAttribute="leading" constant="15" id="cIt-ZK-YLN"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="K8M-tQ-vaT"/>
+                                    <constraint firstAttribute="height" constant="90" id="f4J-Xg-2aL"/>
+                                </constraints>
+                                <blurEffect style="systemUltraThinMaterial"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFG-a8-TWl" userLabel="Visual Effect View1">
+                                <rect key="frame" x="324" y="806" width="50" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bfI-dm-iAE">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgG-RM-YZD">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kr6-GX-mJ8"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bgG-RM-YZD" firstAttribute="centerY" secondItem="bfI-dm-iAE" secondAttribute="centerY" id="7lv-dz-tQ2"/>
+                                        <constraint firstItem="bgG-RM-YZD" firstAttribute="width" secondItem="bfI-dm-iAE" secondAttribute="width" id="mXA-6X-VLd"/>
+                                        <constraint firstItem="bgG-RM-YZD" firstAttribute="height" secondItem="bfI-dm-iAE" secondAttribute="height" id="pQC-W4-WeO"/>
+                                        <constraint firstItem="bgG-RM-YZD" firstAttribute="centerX" secondItem="bfI-dm-iAE" secondAttribute="centerX" id="vzh-GP-nE8"/>
+                                        <constraint firstItem="bgG-RM-YZD" firstAttribute="centerX" secondItem="bfI-dm-iAE" secondAttribute="centerX" id="xo2-SY-vHT"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7pS-DG-CvQ"/>
+                                    <constraint firstAttribute="width" constant="50" id="NoI-HS-LHa"/>
+                                </constraints>
+                                <blurEffect style="systemUltraThinMaterial"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3es-yh-p30"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="right" secondItem="ZFG-a8-TWl" secondAttribute="right" constant="40" id="0ef-eK-NI2"/>
+                            <constraint firstAttribute="bottom" secondItem="ZF0-c0-3Iy" secondAttribute="bottom" id="12S-EK-15E"/>
+                            <constraint firstAttribute="bottom" secondItem="ZFG-a8-TWl" secondAttribute="bottom" constant="40" id="6r1-7O-AiO"/>
+                            <constraint firstItem="p8S-qK-bTx" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="leftMargin" priority="999" id="LC9-GF-i39"/>
+                            <constraint firstItem="p8S-qK-bTx" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" priority="999" constant="-20" id="Mbm-HX-Q8D"/>
+                            <constraint firstItem="ZF0-c0-3Iy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZH6-1S-0QP"/>
+                            <constraint firstItem="ZF0-c0-3Iy" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="left" id="v5u-aP-ooz"/>
+                            <constraint firstAttribute="right" secondItem="ZF0-c0-3Iy" secondAttribute="right" id="wAP-wr-muX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurButtonContainer" destination="ZFG-a8-TWl" id="sEm-Cr-CaM"/>
+                        <outlet property="blurContainer" destination="p8S-qK-bTx" id="C91-ck-304"/>
+                        <outlet property="locationLabel" destination="UOQ-r1-b6I" id="uBo-VA-qVs"/>
+                        <outlet property="map" destination="ZF0-c0-3Iy" id="aIG-ls-ACw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="119.86607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
