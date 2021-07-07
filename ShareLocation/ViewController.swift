@@ -98,6 +98,6 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        guard error != nil else { return }
+        print(error.localizedDescription.description)
     }
 }
